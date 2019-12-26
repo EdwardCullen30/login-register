@@ -56,11 +56,4 @@ app.use(function(req, res, next) {
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/users.js'));
-
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
-
-app.listen(port, console.log(`Server started on port `));
+app.listen(process.env.PORT);
